@@ -8,7 +8,7 @@ function Register(props) {
     e.preventDefault();
     //  Make a call to the register endpoint. It takes 2 arguments. The endpoint and the credentials
     axios
-      .post(" http://localhost:7000/api/v1/auth/register", credentials)
+      .post("http://invicara.herokuapp.com/api/v1/auth/register", credentials)
       .then((res) => {
         //route to login
         props.history.push("/login");

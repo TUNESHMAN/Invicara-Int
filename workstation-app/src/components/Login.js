@@ -3,18 +3,16 @@ import "./Login.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-
 function Login(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
     //  Make a call to the login endpoint. It takes 2 arguments. The endpoint and the credentials
     axios
-      .post(" http://localhost:7000/api/v1/auth/login", credentials)
+      .post("https://invicara.herokuapp.com/api/v1/auth/login", credentials)
       .then((res) => {
         // We retrieve the token from our response and store it in local storage
         localStorage.setItem("token", res.data.token);
         props.history.push("/workstations");
-        
       })
       .catch((error) => {
         throw error;
