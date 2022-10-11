@@ -32,66 +32,124 @@ function Register(props) {
     });
   };
   return (
-    <div className="cover">
-      <div className="center">
-        <h1>Register</h1>
-        <form onSubmit={handleSubmit}>
-          <div className="txt_field">
-            <input
-              type="text"
-              name="firstName" // The name helps us during form submission to keep track of the fields
-              id="firstName" // We use the id to link the input with the label
-              placeholder="John Doe"
-              onChange={handleRegisterChange}
-              value={credentials.firstName}
-            />
-            <span></span>
-            <label htmlFor="email">First Name</label>
-          </div>
-          <div className="txt_field">
-            <input
-              type="text"
-              name="email" // The name helps us during form submission to keep track of the fields
-              id="email" // We use the id to link the input with the label
-              placeholder="email@example.com"
-              onChange={handleRegisterChange}
-              value={credentials.email}
-            />
-            <span></span>
-            <label htmlFor="email">Last Name</label>
-          </div>
-          <div className="txt_field">
-            <input
-              type="text"
-              name="email" // The name helps us during form submission to keep track of the fields
-              id="email" // We use the id to link the input with the label
-              placeholder="email@example.com"
-              onChange={handleRegisterChange}
-              value={credentials.email}
-            />
-            <span></span>
-            <label htmlFor="email">Email</label>
-          </div>
-          <div className="txt_field">
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Enter Password"
-              onChange={handleRegisterChange}
-              value={credentials.password}
-            />
-            <span></span>
-            <label htmlFor="password">Password</label>
-          </div>
-          <button type="submit">Register</button>
-          <div className="signup_link">
-            Have an account?
-            <Link to="/login"> Sign In</Link>
-          </div>
-        </form>
+    // <div className="cover">
+    //   <div className="center">
+    //     <h1>Register</h1>
+    //     <form onSubmit={handleSubmit}>
+    //       <div className="txt_field">
+    //         <input
+    //           type="text"
+    //           name="firstName" // The name helps us during form submission to keep track of the fields
+    //           id="firstName" // We use the id to link the input with the label
+    //           placeholder="John Doe"
+    //           onChange={handleRegisterChange}
+    //           value={credentials.firstName}
+    //         />
+    //         <span></span>
+    //         <label htmlFor="email">First Name</label>
+    //       </div>
+    //       <div className="txt_field">
+    //         <input
+    //           type="text"
+    //           name="email" // The name helps us during form submission to keep track of the fields
+    //           id="email" // We use the id to link the input with the label
+    //           placeholder="email@example.com"
+    //           onChange={handleRegisterChange}
+    //           value={credentials.email}
+    //         />
+    //         <span></span>
+    //         <label htmlFor="email">Last Name</label>
+    //       </div>
+    //       <div className="txt_field">
+    //         <input
+    //           type="text"
+    //           name="email" // The name helps us during form submission to keep track of the fields
+    //           id="email" // We use the id to link the input with the label
+    //           placeholder="email@example.com"
+    //           onChange={handleRegisterChange}
+    //           value={credentials.email}
+    //         />
+    //         <span></span>
+    //         <label htmlFor="email">Email</label>
+    //       </div>
+    //       <div className="txt_field">
+    //         <input
+    //           type="password"
+    //           name="password"
+    //           id="password"
+    //           placeholder="Enter Password"
+    //           onChange={handleRegisterChange}
+    //           value={credentials.password}
+    //         />
+    //         <span></span>
+    //         <label htmlFor="password">Password</label>
+    //       </div>
+    //       <button type="submit">Register</button>
+    //       <div className="signup_link">
+    //         Have an account?
+    //         <Link to="/login"> Sign In</Link>
+    //       </div>
+    //     </form>
+    //   </div>
+    // </div>
+    <form onSubmit={handleSubmit}>
+      <div class="imgcontainer"></div>
+
+      <div class="container">
+        <label htmlFor="uname">
+          <b>First Name</b>
+        </label>
+        <input
+          type="text"
+          placeholder="John"
+          name="firstName"
+          id="firstName"
+          onChange={handleRegisterChange}
+          value={credentials.firstName}
+        />
+
+        <label htmlFor="psw">
+          <b>Last Name</b>
+        </label>
+        <input
+          type="text"
+          placeholder="Doe"
+          name="lastName"
+          id="lastName"
+          onChange={handleRegisterChange}
+          value={credentials.lastName}
+        />
+
+        <label htmlFor="uname">
+          <b>Email</b>
+        </label>
+        <input
+          type="text"
+          placeholder="email@example.com"
+          name="email"
+          id="email"
+          onChange={handleRegisterChange}
+          value={credentials.email}
+        />
+
+        <label htmlFor="psw">
+          <b>Password</b>
+        </label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="password"
+          id="password"
+          onChange={handleRegisterChange}
+          value={credentials.password}
+        />
+
+        <button type="submit">Sign up</button>
+        <div>
+          Already a member? <Link to="/login"> Sign in</Link>{" "}
+        </div>
       </div>
-    </div>
+    </form>
   );
 }
 

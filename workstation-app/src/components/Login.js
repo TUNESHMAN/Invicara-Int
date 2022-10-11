@@ -31,42 +31,40 @@ function Login(props) {
     });
   };
   return (
-    <div className="cover">
-      <div className="center">
-        <h1>Login</h1>
-        <form onSubmit={handleSubmit}>
-          <div className="txt_field">
-            <input
-              type="text"
-              name="email" // The name helps us during form submission to keep track of the fields
-              id="email" // We use the id to link the input with the label
-              placeholder="email@example.com"
-              onChange={handleLoginChange}
-              value={credentials.email}
-            />
-            <span></span>
-            <label htmlFor="email">Email</label>
-          </div>
-          <div className="txt_field">
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Enter Password"
-              onChange={handleLoginChange}
-              value={credentials.password}
-            />
-            <span></span>
-            <label htmlFor="password">Password</label>
-          </div>
-          <button type="submit">Login</button>
-          <div className="signup_link">
-            Not a member?
-            <Link to="/register"> Sign Up</Link>
-          </div>
-        </form>
+    <form onSubmit={handleSubmit}>
+      <div className="imgcontainer"></div>
+
+      <div className="container">
+        <label htmlFor="uname">
+          <b>Email</b>
+        </label>
+        <input
+          type="text"
+          placeholder="email@example.com"
+          name="email"
+          id="email"
+          onChange={handleLoginChange}
+          value={credentials.email}
+        />
+
+        <label htmlFor="psw">
+          <b>Password</b>
+        </label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="password"
+          id="password"
+          onChange={handleLoginChange}
+          value={credentials.password}
+        />
+
+        <button type="submit">Login</button>
+        {/* <div>
+          Not a member? <Link to="/register"> Sign Up</Link>{" "}
+        </div> */}
       </div>
-    </div>
+    </form>
   );
 }
 

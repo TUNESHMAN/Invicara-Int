@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import station from "../Extras/station.mp4";
 import "./LandingPage.css";
-import { NavLink } from "react-router-dom";
+import { NavLink,Link } from "react-router-dom";
 function LandingPage() {
   
   const [toggle, setToggle] = useState(false);
@@ -40,7 +40,7 @@ function LandingPage() {
             Need a work desk? We are at your beck and
             call.
           </p>
-          <a href="/">Explore</a>
+          <Link to="/">Explore</Link>
         </div>
         <ul className="social">
           <li>
@@ -63,16 +63,16 @@ function LandingPage() {
       <div className="menu">
         <ul>
           <li>
-            <NavLink to="/login">Login/Register</NavLink>
+            <NavLink to="/login">Login</NavLink>
           </li>
           <li>
-            <NavLink to="/login">News</NavLink>
+            <NavLink to="/login">Test</NavLink>
           </li>
           <li>
-            <NavLink to="/">Blog</NavLink>
+            <NavLink to="/">Test</NavLink>
           </li>
           <li>
-            <NavLink to="/">Contact</NavLink>
+            <NavLink to="/">Test</NavLink>
           </li>
         </ul>
       </div>

@@ -50,6 +50,7 @@ export default function Sidebar() {
             </li>
           </ul>
         </div>
+        
 
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Notifications</h3>

@@ -5,11 +5,11 @@ import { axiosWithAuth } from "../../utils/axiosWithAuth";
 
 export default function WorkStationInfo() {
   const [workStations, setWorkStations] = useState([]);
+
   const getWorkStations = () => {
     axiosWithAuth()
       .get(`/api/v1/workstation`)
       .then((response) => {
-        console.log(response.data);
         const allWorkStations = response.data;
         setWorkStations(allWorkStations);
       })
