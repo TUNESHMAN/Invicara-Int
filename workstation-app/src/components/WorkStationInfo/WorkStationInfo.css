@@ -1,4 +1,6 @@
-
+.station-container {
+  display: flex;
+}
 .featured {
   width: 100%;
   display: flex;

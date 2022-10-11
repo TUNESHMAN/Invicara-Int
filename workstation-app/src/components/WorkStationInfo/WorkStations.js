@@ -2,7 +2,7 @@ import React from "react";
 import Sidebar from "../Sidebar";
 import "./WorkStationInfo.css";
 import Topbar from "../Topbar/Topbar";
-import Home from "../../pages/Home/Home";
+import Home from "./Home";
 
 function WorkStations() {
   return (

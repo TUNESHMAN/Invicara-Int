@@ -10,6 +10,7 @@ export default function WorkStationInfo() {
     axiosWithAuth()
       .get(`/api/v1/workstation`)
       .then((response) => {
+       
         const allWorkStations = response.data;
         setWorkStations(allWorkStations);
       })
@@ -22,9 +23,10 @@ export default function WorkStationInfo() {
   }, []);
   return (
     <div className="featured">
-      {workStations?.map((workstation) => (
+      <WorkStation workstation={workStations} />
+      {/* {workStations.map((workstation) => (
         <WorkStation key={workstation.id} workstation={workstation} />
-      ))}
+      ))} */}
     </div>
   );
 }
