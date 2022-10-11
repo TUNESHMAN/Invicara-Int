@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Login.css";
 import axios from "axios";
-import { Link } from "react-router-dom";
 
 function Login(props) {
   const handleSubmit = (e) => {
@@ -31,10 +30,11 @@ function Login(props) {
     });
   };
   return (
+    <div className="login-container">
     <form onSubmit={handleSubmit}>
       <div className="imgcontainer"></div>
 
-      <div className="container">
+      <div className="containers">
         <label htmlFor="uname">
           <b>Email</b>
         </label>
@@ -62,6 +62,7 @@ function Login(props) {
         <button type="submit">Login</button>
       </div>
     </form>
+    </div>
   );
 }
 

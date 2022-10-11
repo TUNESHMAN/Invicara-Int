@@ -2,7 +2,7 @@ import React from "react";
 import "./WorkStationInfo.css";
 import { useHistory } from "react-router-dom";
 function WorkStation({ workstation }) {
-  console.log("GOOD", workstation);
+
   let history = useHistory();
   const getSchedule = (id) => {
     history.push(`/workstation/schedule/${id}`);
