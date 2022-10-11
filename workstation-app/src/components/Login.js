@@ -60,9 +60,6 @@ function Login(props) {
         />
 
         <button type="submit">Login</button>
-        {/* <div>
-          Not a member? <Link to="/register"> Sign Up</Link>{" "}
-        </div> */}
       </div>
     </form>
   );
